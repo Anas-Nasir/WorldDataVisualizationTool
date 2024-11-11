@@ -4,24 +4,11 @@ cache:
   paths:
     - node_modules/
 
-stages:
-  - build
-  - deploy
-
-before_script:
-  - npm install
-
-build:
-  stage: build
-  script:
-    - npm run build -- --output-path=public --configuration=production
-
 pages:
   stage: deploy
   script:
-    - echo "Deploying to GitLab Pages"
+    - npm install                 
+    - npm run build -- --output-path=public --configuration=production  
   artifacts:
     paths:
-      - public
-  only:
-    - workingbranch
+      - public                      
