@@ -6,4 +6,4 @@ pages:
     paths:
       - dist/world-map  
   only:
-    - main  
+    - workingbranch
