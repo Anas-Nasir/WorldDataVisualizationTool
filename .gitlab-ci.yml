@@ -5,23 +5,23 @@ stages:
   - deploy
 
 before_script:
-  - npm install  
+  - npm install 
 
 build:
   stage: build
   script:
-    - npm run build -- --output-path=dist/world-map --configuration=production  
+    - npm run build -- --output-path=dist/world-map --configuration=production 
   artifacts:
     paths:
       - dist/world-map  
-   
+    
 
 pages:
   stage: deploy
   script:
-    - mv dist/world-map public  
+    - mv dist/world-map/browser public  
   artifacts:
     paths:
       - public  
   only:
-    - main  
+    - workingbranch
