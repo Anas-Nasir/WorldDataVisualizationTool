@@ -1,10 +1,27 @@
-pages:
-  image: node:18 
+image: node:18
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - npm install  
+
+build:
+  stage: build
   script:
-    - npm install  
     - npm run build -- --output-path=dist/world-map --configuration=production  
   artifacts:
     paths:
       - dist/world-map  
+   
+
+pages:
+  stage: deploy
+  script:
+    - mv dist/world-map public  
+  artifacts:
+    paths:
+      - public  
   only:
-    - workingbranch
+    - main  
