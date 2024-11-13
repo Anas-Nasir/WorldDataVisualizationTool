@@ -11,6 +11,6 @@ pages:
     - npm run build -- --configuration=production  
   artifacts:
     paths:
-      - src
+      - public
   only:
     - workingbranch  
