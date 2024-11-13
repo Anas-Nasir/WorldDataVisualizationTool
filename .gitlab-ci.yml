@@ -19,7 +19,7 @@ build:
 pages:
   stage: deploy
   script:
-    - mv dist/world-map/browser public  
+    -  mv dist/world-map/browser/* public/ 
   artifacts:
     paths:
       - public  
