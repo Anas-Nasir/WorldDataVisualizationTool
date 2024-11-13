@@ -1,14 +1,27 @@
-image: ruby:3.2
+image: node:18
 
-pages:
-  script: |
-    if test -f "index.html"; then
-      gem install jekyll
-      jekyll build -d public
-    else
-      echo "No index.html file found, this file is required."
-      exit
-    fi
+stages:
+  - build
+  - deploy
+
+before_script:
+  - npm install
+
+build:
+  stage: build
+  script:
+    - npm run build -- --output-path=public --configuration=production
   artifacts:
     paths:
       - public
+
+pages:
+  stage: deploy
+  script:
+    - mv public/ ../public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+    - workingbranch
