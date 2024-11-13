@@ -11,4 +11,15 @@ pages:
     - npm run build -- --output-path=public --configuration=production  
   artifacts:
     paths:
-      - public                      
+      - public            
+pages:
+  stage: deploy
+  script:
+    - echo "Deploying to GitLab Pages"
+  artifacts:
+    paths:
+      - public
+  only:
+    - workingbranch          
+
+      
