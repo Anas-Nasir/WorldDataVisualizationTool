@@ -1,12 +1,9 @@
-stages:
-  - build
-
-build:
-  stage: build
-  image: node:18  
+pages:
   script:
-    - npm install
-    - npm run build -- --output-path=dist/world-map --configuration=production
+    - npm install  
+    - npm run build -- --output-path=dist/world-map --configuration=production  
   artifacts:
     paths:
-      - dist/world-map/*
+      - dist/world-map  
+  only:
+    - main  
