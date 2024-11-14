@@ -19,9 +19,11 @@ build:
 pages:
   stage: deploy
   script:
-    -  mv dist/world-map/browser/* public/ 
+    - mkdir -p public                     
+    - mv dist/world-map/* public/ 
   artifacts:
     paths:
       - public  
   only:
     - workingbranch
+
