@@ -19,7 +19,7 @@ pages:
   stage: deploy
   script:
     - mkdir -p public
-    - cp -r dist/world-map/* public/
+    - cp -r dist/world-map/browser/* public/
     - echo '<!DOCTYPE html>
       <html lang="en">
       <head>
