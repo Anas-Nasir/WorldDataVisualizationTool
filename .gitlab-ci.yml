@@ -20,20 +20,7 @@ pages:
   script:
     - mkdir -p public
     - cp -r dist/world-map/browser/* public/
-    - echo '<!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>404 Not Found</title>
-      </head>
-      <body>
-        <script>
-          // Redirect all 404 requests to index.html
-          window.location.replace("/");
-        </script>
-      </body>
-      </html>' > public/404.html
+    - cp 404.html public/404.html  
   artifacts:
     paths:
       - public
