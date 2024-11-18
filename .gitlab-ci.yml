@@ -19,7 +19,7 @@ pages:
   stage: deploy
   script:
     - mkdir -p public
-    - cp -r dist/world-map/* public/
+    - mv dist/world-map/browser/* public/  
   artifacts:
     paths:
       - public
