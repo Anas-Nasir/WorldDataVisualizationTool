@@ -19,7 +19,22 @@ pages:
   stage: deploy
   script:
     - mkdir -p public
-    - mv dist/world-map/browser/* public/  
+    - cp -r dist/world-map/* public/
+    - echo '<!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Redirecting...</title>
+        <script>
+          // Redirect to index.html for SPA fallback
+          window.location.href = "/";
+        </script>
+      </head>
+      <body>
+        <p>Redirecting...</p>
+      </body>
+      </html>' > public/404.html
   artifacts:
     paths:
       - public
