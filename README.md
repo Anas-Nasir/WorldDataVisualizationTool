@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
 
+#Overview
+
+WorldMap is a data visualization tool designed to display and interact with world data in a meaningful way. Built using Angular, it leverages modern web technologies to provide a responsive and interactive user experience.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
