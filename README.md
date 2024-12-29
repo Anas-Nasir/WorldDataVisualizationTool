@@ -5,9 +5,9 @@ The World Data Visualization Tool is an interactive web application that allows 
 
 ## Features
 
-### Interactive World Map: Visualize global data dynamically.
-### Modular Components: Easily extend and modify functionality with Angular's modular design.
-###	Responsive Design: Ensures compatibility across devices.
+##### Interactive World Map: Visualize global data dynamically.
+##### Modular Components: Easily extend and modify functionality with Angular's modular design.
+##### Responsive Design: Ensures compatibility across devices.
 
 ## DEMO
 ![image](https://github.com/user-attachments/assets/e932407f-d081-473c-9b4f-009d82f58310)
