@@ -1,6 +1,7 @@
-# OVERVIEW
+# Description
 
-World Map is a data visualization tool designed to display and interact with world data in a meaningful way. Built using Angular, it leverages modern web technologies to provide a responsive and interactive user experience.
+## World Data Visualization Tool
+The World Data Visualization Tool is an interactive web application that allows users to explore global data through an engaging, clickable map. By selecting any country, users can instantly view detailed information, including key statistics and regional data. Built with Angular, this tool combines intuitive design with real-time data integration, offering an insightful way to visualize and interact with geographical and economic data from around the world
 
 # FEATURES
 
